@@ -13,10 +13,10 @@ services:
     - icon: fa fa-lock
       heading: Security Analysis/Consultation
       text: As hackers continue to become more sophisticated so must your security, protecting you and your client's data is extremely important and we are here to help .
-    - icon: fa fa-project-diagram
+    - icon: fa fa-area-chart
       heading: Process Analysis/Consulting
       text: Devops, Agile, DevSecOps aren't just buzzwords let our experts help your organization adopt these principals and practices and watch your productivity explode.
-    - icon: fa fa-chalkboard-teacher
+    - icon: fa fa-university
       heading: Training
       text: Our staff and partners offer training in various areas.
 
