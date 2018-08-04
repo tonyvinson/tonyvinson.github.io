@@ -5,7 +5,7 @@ intro:
 
 services:
   heading: Services
-  subheading: Security, Cloud, Network, Datacenter, Architecture, Automation, Agile, Devops, Efficiency, Process, Consulting, Training.
+  subheading: Security, Solutions, Cloud, Network, Datacenter, Architecture, Automation, Agile, Devops, Efficiency, Process, Consulting, Training.
   service:
     - icon: fa fa-cloud
       heading: Cloud Migration/Solutions
@@ -15,8 +15,11 @@ services:
       text: As hackers continue to become more sophisticated so must your security, protecting you and your client's data is extremely important and we are here to help .
     - icon: fa fa-area-chart
       heading: Process Analysis/Consulting
-      text: Devops, Agile, DevSecOps aren't just buzzwords let our experts help your organization adopt these principals and practices and watch your productivity explode.
-    - icon: fa fa-university
+      text: Devops, Agile, DevSecOps aren't just buzzwords let our experts help your organization adopt these principals and practices and watch your productivity explode.  
+    - icon: fa fa-wifi
+      heading: Networking
+      text: Design, Security, Consulting services for cloud and traditional network solutions .
+   - icon: fa fa-university
       heading: Training
       text: Our staff and partners offer training in various areas.
 
