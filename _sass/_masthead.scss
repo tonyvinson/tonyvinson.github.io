@@ -2,7 +2,14 @@
 header.masthead {
   text-align: center;
   color: $primary;
-  background-image: url('../img/business-computer-connection-450035.jpg');
+  .darken {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/business-computer-connection-450035.jpg');
+} 
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
