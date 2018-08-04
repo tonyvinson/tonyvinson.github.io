@@ -19,7 +19,7 @@ services:
     - icon: fa fa-wifi
       heading: Networking
       text: Design, Security, Consulting, Implementation services for cloud and traditional network solutions .
-   - icon: fa fa-university
+    - icon: fa fa-university
       heading: Training
       text: Our staff and partners offer training in various areas.
 
