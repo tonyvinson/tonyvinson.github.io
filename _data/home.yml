@@ -5,7 +5,7 @@ intro:
 
 services:
   heading: Services
-  subheading: Security, Cloud, Network, Datacenter, Automation, Agile, Devops, Efficiency, Process, Training.
+  subheading: Security, Cloud, Network, Datacenter, Automation, Agile, Devops, Efficiency, Process, Consulting, Training.
   service:
     - icon: fa fa-cloud
       heading: Cloud Migration/Solutions
