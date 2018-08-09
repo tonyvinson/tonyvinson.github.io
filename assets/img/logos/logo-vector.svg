@@ -1,0 +1,50 @@
+
+        <svg version="1.1" id="svg-editor-canvas" x="0px" y="0px" class="canvas" width="480" height="299" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" xml:space="preserve">
+				<g id="svg-engine">
+				
+				 <g ng-repeat="shape in logo.shapes | orderBy:'zindex'" class="ng-scope"> 
+					
+					
+					
+					
+	
+					
+					<g type="container-logo" ng-click="clickOnItem($event,shape)" ng-class="{'active': shape.selected, 'dragging': dragging}" ng-right-click="rightClick($event)" class="logo-item ng-scope" ng-if="shape.type == 'logo' || shape.type == 'shape'" ng-attr-transform="translate({{(shape.symetrieX == 1 ? shape.x : shape.x + shape.width)}} {{(shape.symetrieY == 1 ? shape.y : shape.y + shape.height)}}) scale({{shape.width / shape.originalWidth * shape.symetrieX}} {{shape.height / shape.originalHeight * shape.symetrieY}}) rotate({{shape.rotate * shape.symetrieX * shape.symetrieY}} {{shape.originalWidth / 2}} {{shape.originalHeight / 2}})" id="shape-11" ng-mousedown="mouseDownItem($event,shape)" ng-mouseover="mouseUpItem($event,shape)" ng-mouseout="mouseOutItem($event,shape)" transform="translate(174 -9.844379746937193e-7) scale(1.5672945251145312 1.5672945251145312) rotate(0 52.63848876953125 52.63848876953125)">
+	
+						<g type="logo" class="svg-item ng-isolate-scope ng-pristine ng-valid" ng-model="shape" ng-shape="" ng-click="skav($event, shape)"><polygon points="46.778,105.276 46.778,11.72 0,11.72 0,0 105.277,0 105.277,11.72 58.472,11.72 58.472,105.276 " ng-click="mouseDown($event,0)" id="PATH_11_0" fill="#f6851f" class="ng-scope"></polygon><polygon points="23.389,105.276 23.389,35.109 0,35.109 0,23.415 35.083,23.415 35.083,105.276 " ng-click="mouseDown($event,1)" id="PATH_11_1" fill="#303030" class="ng-scope"></polygon><rect y="46.804" width="11.695" height="58.473" ng-click="mouseDown($event,2)" id="PATH_11_2" fill="#f6851f" class="ng-scope"></rect><polygon points="70.167,105.276 70.167,23.415 105.277,23.415 105.277,35.109 81.861,35.109 81.861,105.276 " ng-click="mouseDown($event,3)" id="PATH_11_3" fill="#303030" class="ng-scope"></polygon><rect x="93.556" y="46.804" width="11.721" height="58.473" ng-click="mouseDown($event,4)" id="PATH_11_4" fill="#f6851f" class="ng-scope"></rect></g>
+					</g>
+				 </g><g ng-repeat="shape in logo.shapes | orderBy:'zindex'" class="ng-scope"> 
+					
+					<g ng-dblclick="test($event)" on-change="changeText(shape)" ng-model="shape" ng-click="clickOnItem($event,shape)" ng-right-click="rightClick($event)" ng-class="{'active': shape.selected}" class="contenteditable logo-item ng-scope ng-pristine ng-valid noclick" ng-attr-transform="translate({{shape.x}} {{shape.y + (shape.bbox.y * -1 * shape.ratio)}})  scale({{shape.ratio}} {{shape.ratio}})" ng-if="shape.type == 'text'" id="shape-8" ng-mousedown="mouseDownItem($event,shape)" ng-mouseover="mouseUpItem($event,shape)" ng-mouseout="mouseOutItem($event,shape)" transform="translate(0 244.98538208007812)  scale(1 1)" contenteditable="false">
+						<text class="real-text ng-binding" id="text-8" dominant-baseline="auto" alignment-baseline="auto" font-family="Butler" font-size="62px" fill="#303030" ng-attr-dx="{{shape.dx}}" xml:space="preserve" dx="0 0 0 0 0 0 0 0 0 0 0">TechVizions</text>
+					</g>
+					
+					
+	
+					
+					
+				 </g><g ng-repeat="shape in logo.shapes | orderBy:'zindex'" class="ng-scope"> 
+					
+					<g ng-dblclick="test($event)" on-change="changeText(shape)" ng-model="shape" ng-click="clickOnItem($event,shape)" ng-right-click="rightClick($event)" ng-class="{'active': shape.selected}" class="contenteditable logo-item ng-scope ng-pristine ng-valid noclick" ng-attr-transform="translate({{shape.x}} {{shape.y + (shape.bbox.y * -1 * shape.ratio)}})  scale({{shape.ratio}} {{shape.ratio}})" ng-if="shape.type == 'text'" id="shape-9" ng-mousedown="mouseDownItem($event,shape)" ng-mouseover="mouseUpItem($event,shape)" ng-mouseout="mouseOutItem($event,shape)" transform="translate(351.421875 244.98538208007812)  scale(1 1)" contenteditable="false">
+						<text class="real-text ng-binding" id="text-9" dominant-baseline="auto" alignment-baseline="auto" font-family="Butler" font-size="62px" fill="#f6851f" ng-attr-dx="{{shape.dx}}" xml:space="preserve" dx="0 0 0">LLC</text>
+					</g>
+					
+					
+	
+					
+					
+				 </g><g ng-repeat="shape in logo.shapes | orderBy:'zindex'" class="ng-scope"> 
+					
+					<g ng-dblclick="test($event)" on-change="changeText(shape)" ng-model="shape" ng-click="clickOnItem($event,shape)" ng-right-click="rightClick($event)" ng-class="{'active': shape.selected}" class="contenteditable logo-item ng-scope ng-pristine ng-valid noclick" ng-attr-transform="translate({{shape.x}} {{shape.y + (shape.bbox.y * -1 * shape.ratio)}})  scale({{shape.ratio}} {{shape.ratio}})" ng-if="shape.type == 'text'" id="shape-10" ng-mousedown="mouseDownItem($event,shape)" ng-mouseover="mouseUpItem($event,shape)" ng-mouseout="mouseOutItem($event,shape)" transform="translate(112.78125 286.4853820800781)  scale(1 1)" contenteditable="false">
+						<text class="real-text ng-binding" id="text-10" dominant-baseline="auto" alignment-baseline="auto" font-family="Butler" font-size="34px" fill="#f6851f" ng-attr-dx="{{shape.dx}}" xml:space="preserve" dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0">Consulting Group</text>
+					</g>
+					
+					
+	
+					
+					
+				 </g>
+				 </g>
+             
+        </svg>
+        
