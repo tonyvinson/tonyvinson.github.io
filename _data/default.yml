@@ -1,5 +1,5 @@
 brand:
-  name: assets/img/logos/logo-web-transparent.png
+  name: ../img/logos/logo-web-transparent.png
 menu-string: Menu
 
 nav:
