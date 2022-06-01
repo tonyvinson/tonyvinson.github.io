@@ -9,8 +9,8 @@ nav:
 #    url: '#portfolio'
   - title: About
     url: '#about'
-  - title: Team
-    url: '#team'
+#  - title: Team
+#    url: '#team'
   - title: Contact
     url: '#contact'
 
