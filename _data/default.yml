@@ -5,8 +5,8 @@ menu-string: Menu
 nav:
   - title: Services
     url: '#services'
-  - title: Portfolio
-    url: '#portfolio'
+#  - title: Portfolio
+#    url: '#portfolio'
   - title: About
     url: '#about'
   - title: Team
