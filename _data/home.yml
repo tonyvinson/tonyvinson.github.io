@@ -25,7 +25,7 @@ services:
 
 portfolio:
   heading: Portfolio
-  subheading: Lorem ipsum dolor sit amet consectetur.
+  #subheading: Lorem ipsum dolor sit amet consectetur.
 
 about:
   heading: About
