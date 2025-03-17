@@ -187,70 +187,82 @@ layout: default
       </div>
     </section>
 -->
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.contact.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.contact.subheading }}</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" method="POST" action="https://formspree.io/f/xnnpnzbv" novalidate="novalidate">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input class="form-control" id="name" type="text" name="name" placeholder="{{ site.data.home.contact.name }}" required="required" data-validation-required-message="{{ site.data.home.contact.name-required }}">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="email" type="email" name="_replyto" placeholder="{{ site.data.home.contact.email }}" required="required" data-validation-required-message="{{ site.data.home.contact.email-required }}">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" name="phone" placeholder="{{ site.data.home.contact.phone }}" required="required" data-validation-required-message="{{ site.data.home.contact.phone-required }}">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <textarea class="form-control" id="message" name="message" placeholder="{{ site.data.home.contact.message }}" required="required" data-validation-required-message="{{ site.data.home.contact.message-required }}"></textarea>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-lg-12 text-center">
-                  <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">{{ site.data.home.contact.btn }}</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{{ site.data.home.contact.heading }}</h2>
+        <h3 class="section-subheading text-muted">{{ site.data.home.contact.subheading }}</h3>
       </div>
-    </section>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <form id="contactForm" action="https://formspree.io/f/xnnpnzbv" method="POST">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input class="form-control" id="name" type="text" name="name" placeholder="{{ site.data.home.contact.name }}" required>
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="email" type="email" name="email" placeholder="{{ site.data.home.contact.email }}" required>
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <input class="form-control" id="phone" type="tel" name="phone" placeholder="{{ site.data.home.contact.phone }}" required>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <textarea class="form-control" id="message" name="message" placeholder="{{ site.data.home.contact.message }}" required></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="col-lg-12 text-center">
+              <p id="form-status"></p>
+              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">
+                {{ site.data.home.contact.btn }}
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-    document.getElementById("contactForm").addEventListener("submit", async function(event) {
-        event.preventDefault();
-        
-        let form = event.target;
-        let formData = new FormData(form);
+<!-- AJAX Script -->
+<script>
+  document.getElementById("contactForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+    
+    let form = event.target;
+    let status = document.getElementById("form-status");
+    let formData = new FormData(form);
 
-        let response = await fetch(form.action, {
-            method: "POST",
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-        });
+    try {
+      let response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
 
-        if (response.ok) {
-            document.getElementById("success").innerHTML = "<p class='text-success'>Your message has been sent!</p>";
-            form.reset();
+      if (response.ok) {
+        status.innerHTML = "<p class='text-success'>Thanks for your submission!</p>";
+        form.reset();
+      } else {
+        let data = await response.json();
+        if (data.errors) {
+          status.innerHTML = "<p class='text-danger'>" + data.errors.map(error => error.message).join(", ") + "</p>";
         } else {
-            document.getElementById("success").innerHTML = "<p class='text-danger'>There was an error sending your message. Please try again.</p>";
+          status.innerHTML = "<p class='text-danger'>Oops! There was a problem submitting your form.</p>";
         }
-    });
-    </script>
+      }
+    } catch (error) {
+      status.innerHTML = "<p class='text-danger'>Oops! There was a problem submitting your form.</p>";
+    }
+  });
+</script>
 
