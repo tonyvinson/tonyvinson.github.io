@@ -67,7 +67,7 @@ clients:
 
 contact:
   heading: Contact Us
-  subheading: Lorem ipsum dolor sit amet consectetur.
+  subheading: 
   name: Your Name *
   name-required: Please enter your name.
   email: Your Email *
