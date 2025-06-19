@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  
+  
+  
+  <g id="icon" transform="translate(20, 40)">
+    
+    
+    <rect x="0" y="0" width="120" height="20" fill="#F58220" />
+    
+    <rect x="50" y="0" width="20" height="120" fill="#F58220" />
+    
+    
+    <rect x="0" y="45" width="15" height="75" fill="#F58220" />
+    
+    
+    
+    <rect x="0" y="25" width="40" height="15" fill="#333333" />
+    
+    <rect x="25" y="25" width="15" height="95" fill="#333333" />
+    
+    
+    
+    <rect x="80" y="25" width="15" height="95" fill="#333333" />
+    
+    <rect x="80" y="25" width="40" height="15" fill="#333333" />
+    
+    
+    <rect x="105" y="45" width="15" height="75" fill="#F58220" />
+  </g>
+  
+  
+  <g id="text">
+    
+    <text x="180" y="100" font-family="Montserrat, Arial, sans-serif" font-size="48" font-weight="500" fill="#3a3a3a">TechVizions</text>
+    
+    
+    <text x="445.0" y="100" font-family="Montserrat, Arial, sans-serif" font-size="48" font-weight="500" fill="#F58220">LLC</text>
+    
+    
+    <text x="180" y="140" font-family="Montserrat, Arial, sans-serif" font-size="26" font-weight="400" fill="#F58220">Consulting Group</text>
+  </g>
+</svg>
