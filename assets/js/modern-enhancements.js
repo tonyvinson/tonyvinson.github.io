@@ -1,4 +1,4 @@
-// Modern JavaScript Enhancements
+// Modern JavaScript Enhancements (Fixed for Portfolio Modals)
 (function($) {
   "use strict";
 
@@ -25,8 +25,8 @@
     }, 3000);
   });
 
-  // Smooth Scroll Enhancement for all anchors
-  $('a[href*="#"]:not([href="#"])').click(function() {
+  // Smooth Scroll Enhancement - FIXED to exclude modal triggers
+  $('a[href*="#"]').not('[href="#"]').not('[data-toggle="modal"]').not('.portfolio-link').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
