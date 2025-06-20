@@ -3,3 +3,5 @@
 .sass-cache
 _site
 Gemfile.lock
+dump_site_code.sh
+site_code_dump.txt
