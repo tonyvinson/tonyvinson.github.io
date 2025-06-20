@@ -1,267 +1,129 @@
----
-layout: default
----
-{%- assign assets_path = "assets/" -%}
-{%- if site.assets_path -%}
-  {%- assign assets_path = site.assets_path -%}
-{%- endif -%}
-    {% assign ws = '' %}
-    <!-- Header -->
-    <header class="masthead">
-      <div class="container">
-        <div class="intro-text">
-          <div class="intro-lead-in">{{ site.data.home.intro.lead-in }}</div>
-          <div class="intro-heading text-uppercase">{{ site.data.home.intro.heading }}</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">{{ site.data.home.intro.btn }}</a>
-        </div>
-      </div>
-    </header>
+<!-- _layouts/home.html -->
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- Services -->
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.services.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.services.subheading }}</h3>
-          </div>
-        </div>
-        <div class="row text-center">
-          {%- for service in site.data.home.services.service -%}
-          {% assign ws = '' %}
-          <div class="col-md-4">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="{{ service.icon }} fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">{{ service.heading }}</h4>
-            <p class="text-muted">{{ service.text }}</p>
-          </div>
-          {%- endfor -%}
-        {% assign ws = '' %}
-        </div>
-           <div class="row text-center">
-      <div class="col-md-12">
-        <a href="/assets/files/TechVizions_Capabilities_Statement.pdf" class="btn btn-primary" target="_blank">
-          Download Our Capabilities Statement
-        </a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechVizions | Secure, Scalable Cloud Architecture</title>
+  <link href="{{ assets_path }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ assets_path }}vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+  <link href="{{ assets_path }}css/agency.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">{{ site.data.home.intro.lead-in }}</div>
+        <div class="intro-heading text-uppercase">Secure, scalable cloud architecture for government, regulated industries, and critical SaaS platforms.</div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">{{ site.data.home.intro.btn }}</a>
       </div>
     </div>
-  </div>
-    </section>
+  </header>
 
-    <!-- Portfolio Grid -->
- 
-    <section class="bg-light" id="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.portfolio.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.portfolio.subheading }}</h3>
-          </div>
-        </div>
-        <div class="row">
-          {%- for project in site.projects -%}
-          {% assign ws = '' %}
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal{{ project.id | replace: '/projects/', '' }}">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ assets_path }}{{ project.thumbnail }}" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>{{ project.client }}</h4>
-              <p class="text-muted">{{ project.category }}</p>
-            </div>
-          </div>
-          {%- endfor -%}
-        {% assign ws = '' %}
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <!--
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.about.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.about.subheading  }}</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="timeline">
-              {%- for time in site.data.home.about.timeline -%}
-              {% assign ws = '' %}
-              <li{% cycle '', ' class="timeline-inverted"' %}>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="{{ assets_path }}{{ time.image }}" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>{{ time.date }}</h4>
-                    <h4 class="subheading">{{ time.title }}</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">{{ time.text  }}</p>
-                  </div>
-                </div>
-              </li>
-              {%- endfor -%}
-              {% assign ws = '' %}
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <h4>{{ site.data.home.about.end1 }}
-                    <br>{{ site.data.home.about.end2 }}
-                    <br>{{ site.data.home.about.end3 }}</h4>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
--->
-    <!-- Team -->
-<!--
-    <section class="bg-light" id="team">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.team.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.team.subheading }}</h3>
-          </div>
-        </div>
-        <div class="row">
-          {%- for member in site.data.home.team.members -%}
-          {% assign ws = '' %}
-          <div class="col-sm-4">
-            <div class="team-member">
-              <img class="mx-auto rounded-circle" src="{{ assets_path }}{{ member.img }}" alt="">
-              <h4>{{ member.name }}</h4>
-              <p class="text-muted">{{ member.role }}</p>
-              <ul class="list-inline social-buttons">
-                {%- for sm in member.social-buttons -%}
-                {% assign ws = '' %}
-                <li class="list-inline-item">
-                  <a href="{{ sm.url }}">
-                    <i class="{{ sm.icon }}"></i>
-                  </a>
-                </li>
-                {%- endfor -%}
-              {% assign ws = '' %}
-              </ul>
-            </div>
-          </div>
-          {%- endfor -%}
-        {% assign ws = '' %}
-        </div>
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">{{ site.data.home.team.text }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
--->
-    <!-- Clients -->
-<!--
-    <section class="py-5">
-      <div class="container">
-        <div class="row">
-          {%- for client in site.data.home.clients -%}
-          {% assign ws = '' %}
-          <div class="col-md-3 col-sm-6">
-            <a href="{{ client.url }}">
-              <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ client.img }}" alt="">
-            </a>
-          </div>
-          {%-  endfor -%}
-        {% assign ws = '' %}
-        </div>
-      </div>
-    </section>
--->
-<!-- Contact -->
-<section id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">{{ site.data.home.contact.heading }}</h2>
-        <h3 class="section-subheading text-muted">{{ site.data.home.contact.subheading }}</h3>
+  <!-- Placeholder: Services Section -->
+  <section id="services">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">Services</h2>
+        <h3 class="section-subheading text-muted">What we offer</h3>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <form id="contactForm" action="https://formspree.io/f/xnnpnzbv" method="POST">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <input class="form-control" id="name" type="text" name="name" placeholder="{{ site.data.home.contact.name }}" required>
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="form-group">
-                <input class="form-control" id="email" type="email" name="email" placeholder="{{ site.data.home.contact.email }}" required>
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="form-group">
-                <input class="form-control" id="phone" type="tel" name="phone" placeholder="{{ site.data.home.contact.phone }}" required>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <textarea class="form-control" id="message" name="message" placeholder="{{ site.data.home.contact.message }}" required></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="col-lg-12 text-center">
-              <p id="form-status"></p>
-              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">
-                {{ site.data.home.contact.btn }}
-              </button>
-            </div>
-          </div>
-        </form>
+  </section>
+
+  <!-- Placeholder: Portfolio Section -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">Portfolio</h2>
+        <h3 class="section-subheading text-muted">Our recent work</h3>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- AJAX Script -->
-<script>
-  document.getElementById("contactForm").addEventListener("submit", async function(event) {
-    event.preventDefault();
-    
-    let form = event.target;
-    let status = document.getElementById("form-status");
-    let formData = new FormData(form);
+  <!-- Placeholder: About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">About</h2>
+        <h3 class="section-subheading text-muted">Our story</h3>
+      </div>
+    </div>
+  </section>
 
-    try {
-      let response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
+  <!-- Placeholder: Team Section -->
+  <section id="team">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">Team</h2>
+        <h3 class="section-subheading text-muted">Meet the crew</h3>
+      </div>
+    </div>
+  </section>
 
-      if (response.ok) {
-        status.innerHTML = "<p class='text-success'>Thanks for your submission!</p>";
-        form.reset();
-      } else {
-        let data = await response.json();
-        if (data.errors) {
-          status.innerHTML = "<p class='text-danger'>" + data.errors.map(error => error.message).join(", ") + "</p>";
-        } else {
-          status.innerHTML = "<p class='text-danger'>Oops! There was a problem submitting your form.</p>";
-        }
-      }
-    } catch (error) {
-      status.innerHTML = "<p class='text-danger'>Oops! There was a problem submitting your form.</p>";
-    }
-  });
-</script>
+  <!-- Placeholder: Clients Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3 col-sm-6 my-3">
+          <img class="img-fluid img-brand d-block mx-auto" src="{{ assets_path }}img/logos/envato.jpg" alt="Envato" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Placeholder: Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">Contact Us</h2>
+        <h3 class="section-subheading text-muted">We'd love to hear from you</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 text-lg-left">Copyright © TechVizions 2025</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{ assets_path }}vendor/jquery/jquery.min.js"></script>
+  <script src="{{ assets_path }}vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{{ assets_path }}vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="{{ assets_path }}js/jqBootstrapValidation.js"></script>
+  <script src="{{ assets_path }}js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{{ assets_path }}js/agency.min.js"></script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/68559a59c96da61913b71e5c/1iu765rmi';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script--> 
+</body>
+
+</html>
+
