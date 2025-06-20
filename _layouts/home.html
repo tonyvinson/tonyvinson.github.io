@@ -6,61 +6,82 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TechVizions | Secure, Scalable Cloud Architecture</title>
-  <link href="{{ assets_path }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="{{ assets_path }}vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
-  <link href="{{ assets_path }}css/agency.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/vendor/bootstrap/css/bootstrap.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
-<body id="page-top">
+<body>
+  <!-- Hero Section -->
+  <header class="masthead text-center text-white bg-primary py-5">
+    <div class="container">
+      <h1 class="display-4">Cloud Architecture. Secure by Design.</h1>
+      <p class="lead">We design and deliver scalable, secure, and compliant infrastructure — from startups to the enterprise.</p>
+      <a href="#portfolio" class="btn btn-light btn-lg mt-4">View Our Work</a>
+    </div>
+  </header>
 
-  {% include nav.html %}
+  <!-- About Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="mb-4">Engineering Trust in the Cloud</h2>
+          <p class="text-muted">
+            TechVizions helps organizations build resilient cloud platforms with security, automation, and compliance at the core. Our expertise spans AWS, Kubernetes, DevSecOps, and regulated environments including FedRAMP, HIPAA, and PCI.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  {% include header.html subheadline="Supporting regulated industries, enterprise SaaS, and mission-critical startups." %}
+  <!-- Portfolio Preview -->
+  <section id="portfolio" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Featured Projects</h2>
+      <div class="row">
+        {% for project in site.projects limit:3 %}
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ project.title }}</h5>
+              <p class="card-text">{{ project.description | truncatewords: 20 }}</p>
+              <a href="{{ project.url | relative_url }}" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="text-center mt-4">
+        <a href="/projects" class="btn btn-outline-primary">View Full Portfolio</a>
+      </div>
+    </div>
+  </section>
 
-  {% include services.html %}
+  <!-- Contact CTA -->
+  <section class="py-5 bg-dark text-white text-center">
+    <div class="container">
+      <h2 class="mb-4">Need help scaling your cloud platform securely?</h2>
+      <p class="mb-4">Whether you're in government, finance, healthcare, or SaaS — we can help.</p>
+      <a href="/contact" class="btn btn-light btn-lg">Get in Touch</a>
+    </div>
+  </section>
 
-  {% include portfolio.html %}
+  <script src="{{ '/assets/vendor/jquery/jquery.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 
-  {% include about.html %}
-
-  {% include team.html %}
-
-  {% include clients.html %}
-
-  {% include contact.html %}
-
-  {% include footer.html %}
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="{{ assets_path }}vendor/jquery/jquery.min.js"></script>
-  <script src="{{ assets_path }}vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="{{ assets_path }}vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Contact form JavaScript -->
-  <script src="{{ assets_path }}js/jqBootstrapValidation.js"></script>
-  <script src="{{ assets_path }}js/contact_me.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="{{ assets_path }}js/agency.min.js"></script>
-
-  <!--Start of Tawk.to Script-->
+  <!-- Tawk.to Live Chat Script -->
   <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/68559a59c96da61913b71e5c/1iu765rmi';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-  })();
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/68559a59c96da61913b71e5c/1iu765rmi';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
   </script>
-  <!--End of Tawk.to Script--> 
 </body>
 
 </html>
-
