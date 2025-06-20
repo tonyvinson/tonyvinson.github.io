@@ -1,0 +1,312 @@
+// _modern-enhancements.scss
+// Add this file to your _sass folder
+// Then import it in agency.min.scss after all other imports
+
+// Modern CSS Variables that work with your existing colors
+:root {
+  --primary-color: #f6851f;
+  --primary-hover: #e57519;
+  --dark-color: #212529;
+  --gray-light: #f8f9fa;
+  --transition-speed: 0.3s;
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+// Smooth scrolling for the entire page
+html {
+  scroll-behavior: smooth;
+}
+
+// Better box-sizing for all elements
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// Smooth transitions for interactive elements
+a,
+button,
+.btn,
+.portfolio-item,
+.portfolio-hover,
+.fa-stack,
+.form-control,
+.navbar-brand img {
+  transition: all var(--transition-speed) ease;
+}
+
+// Enhanced Service Icons
+#services {
+  .fa-stack {
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-10px) scale(1.05);
+      
+      .fa-circle {
+        transform: scale(1.1);
+      }
+      
+      .fa-stack-1x {
+        animation: iconRotate 0.6s ease;
+      }
+    }
+  }
+}
+
+@keyframes iconRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Modern Portfolio Hover Effects
+.portfolio-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    
+    .portfolio-hover {
+      opacity: 1;
+    }
+  }
+  
+  .portfolio-hover {
+    background: linear-gradient(135deg, rgba(246, 133, 31, 0.9) 0%, rgba(254, 161, 64, 0.9) 100%);
+    
+    .portfolio-hover-content {
+      animation: fadeInUp 0.3s ease;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Enhanced Button Styles
+.btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+  }
+  
+  &:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+  
+  &.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--primary-hover) !important;
+      border-color: var(--primary-hover) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(246, 133, 31, 0.3);
+    }
+  }
+}
+
+// Modern Form Styling
+.form-control {
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  padding: 12px 20px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  
+  &:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(246, 133, 31, 0.25);
+    transform: translateY(-2px);
+  }
+  
+  &::placeholder {
+    color: #adb5bd;
+    transition: opacity 0.3s ease;
+  }
+  
+  &:focus::placeholder {
+    opacity: 0.5;
+  }
+}
+
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+// Navigation Enhancements
+#mainNav {
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  
+  &.navbar-shrink {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(33, 37, 41, 0.98) !important;
+    box-shadow: var(--shadow-md);
+    
+    .navbar-brand img {
+      max-height: 70px;
+    }
+  }
+  
+  .navbar-nav .nav-link {
+    font-weight: 600;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transform: translateX(-50%);
+      transition: width 0.3s ease;
+    }
+    
+    &:hover::after,
+    &.active::after {
+      width: 80%;
+    }
+  }
+}
+
+// Hero Section Enhancement
+.masthead {
+  .intro-text {
+    .intro-lead-in {
+      animation: fadeInDown 1s ease;
+    }
+    
+    .intro-heading {
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+    
+    .btn {
+      animation: fadeIn 1s ease 0.6s both;
+    }
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+// Section Headings Enhancement
+.section-heading {
+  position: relative;
+  padding-bottom: 20px;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    transform: translateX(-50%);
+  }
+}
+
+// Footer Enhancement
+footer {
+  background-color: var(--dark-color);
+  
+  .social-buttons li a {
+    background-color: transparent;
+    border: 2px solid #495057;
+    
+    &:hover {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// Loading State for Buttons
+.btn-loading {
+  color: transparent !important;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+    border: 2px solid #fff;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: btnSpinner 0.6s linear infinite;
+  }
+}
+
+@keyframes btnSpinner {
+  to { transform: rotate(360deg); }
+}
+
+// Mobile Responsive Improvements
+@media (max-width: 768px) {
+  .intro-heading {
+    font-size: 40px !important;
+    line-height: 1.2;
+  }
+  
+  .portfolio-item {
+    margin-bottom: 30px;
+  }
+  
+  #mainNav .navbar-brand img {
+    max-height: 60px;
+  }
+}
