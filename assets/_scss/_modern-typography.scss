@@ -1,0 +1,45 @@
+// Modern Typography Styles
+
+// Headings (h1-h6, .section-heading, .portfolio-caption h4, .service-heading)
+h1, h2, h3, h4, h5, h6,
+.section-heading,
+.portfolio-caption h4,
+.service-heading {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+// Decorative (for .intro-heading or .brand if you want a script touch)
+.intro-heading,
+.brand-script {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 0.03em;
+}
+
+// Body text
+body,
+.text-muted,
+.section-subheading,
+.portfolio-caption p,
+p {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  color: #343a40; // Tweak for your brand if needed
+}
+
+// Button & navbar text
+.btn,
+.navbar,
+.navbar-nav .nav-link,
+.btn-xl,
+.btn-primary {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
