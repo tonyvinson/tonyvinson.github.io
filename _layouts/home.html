@@ -53,79 +53,41 @@ layout: default
     <!-- Portfolio Grid -->
  
     <section class="bg-light" id="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase" data-aos="fade-up">{{ site.data.home.portfolio.heading }}</h2>
-            <h3 class="section-subheading text-muted" data-aos="fade-up" data-aos-delay="100">{{ site.data.home.portfolio.subheading }}</h3>
-          </div>
-        </div>
-        <div class="row">
-          {%- for project in site.projects -%}
-          {% assign ws = '' %}
-          <div class="col-md-4 col-sm-6 portfolio-item" data-aos="zoom-in" data-aos-delay="{{ forloop.index | times: 100 }}">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal{{ project.id | replace: '/projects/', '' }}">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fas fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ assets_path }}{{ project.thumbnail }}" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>{{ project.client }}</h4>
-              <p class="text-muted">{{ project.category }}</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase" data-aos="fade-up">{{ site.data.home.portfolio.heading }}</h2>
+        <h3 class="section-subheading text-muted" data-aos="fade-up" data-aos-delay="100">{{ site.data.home.portfolio.subheading }}</h3>
+      </div>
+    </div>
+    <div class="row">
+      {%- for project in site.projects -%}
+      {% assign ws = '' %}
+      <div class="col-md-4 col-sm-6 portfolio-item" data-aos="zoom-in" data-aos-delay="{{ forloop.index | times: 100 }}">
+        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal{{ project.id | replace: '/projects/', '' }}">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-          {%- endfor -%}
-        {% assign ws = '' %}
+          <div class="img-container ratio-4x3">
+            <img class="img-fluid lazy img-loading" 
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 3'%3E%3C/svg%3E"
+                 data-src="{{ assets_path }}{{ project.thumbnail }}" 
+                 alt="{{ project.client }} - {{ project.category }}"
+                 loading="lazy">
+          </div>
+        </a>
+        <div class="portfolio-caption">
+          <h4>{{ project.client }}</h4>
+          <p class="text-muted">{{ project.category }}</p>
         </div>
       </div>
-    </section>
-
-    <!-- About -->
-    <!--
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.about.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.about.subheading  }}</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="timeline">
-              {%- for time in site.data.home.about.timeline -%}
-              {% assign ws = '' %}
-              <li{% cycle '', ' class="timeline-inverted"' %}>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="{{ assets_path }}{{ time.image }}" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>{{ time.date }}</h4>
-                    <h4 class="subheading">{{ time.title }}</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">{{ time.text  }}</p>
-                  </div>
-                </div>
-              </li>
-              {%- endfor -%}
-              {% assign ws = '' %}
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <h4>{{ site.data.home.about.end1 }}
-                    <br>{{ site.data.home.about.end2 }}
-                    <br>{{ site.data.home.about.end3 }}</h4>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+      {%- endfor -%}
+    {% assign ws = '' %}
+    </div>
+  </div>
+</section>
 -->
     <!-- Team -->
 <!--

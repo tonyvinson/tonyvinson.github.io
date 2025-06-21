@@ -149,7 +149,11 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">{{ project.title }}</h2>
                   <p class="item-intro text-muted">{{ project.description }}</p>
-                  <img class="img-fluid d-block mx-auto" src="{{ assets_path }}{{ project.image }}" alt="">
+                  <img class="img-fluid d-block mx-auto lazy" 
+     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+     data-src="{{ assets_path }}{{ project.image }}" 
+     alt="{{ project.title }}"
+     loading="lazy">
                   {% assign ws = '' %}
                   {{- project.content -}}
                   {% assign ws = '' %}                  <ul class="list-inline">
@@ -203,6 +207,9 @@
         });
       });
     </script>
+    
+    <!-- Lazy Loading Script -->
+    <script src="{{ assets_path }}js/lazy-loading.js"></script>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">

@@ -310,3 +310,116 @@ footer {
     max-height: 60px;
   }
 }
+
+// Blur-up effect for images
+img {
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+// Loading state with blur
+img.lazy {
+  filter: blur(8px);
+  opacity: 0.8;
+  background: #f8f9fa;
+}
+
+// Loaded state - remove blur
+img.lazy-loaded {
+  filter: blur(0);
+  opacity: 1;
+}
+
+// Loading animation placeholder
+.img-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: imgLoading 1.5s infinite;
+}
+
+@keyframes imgLoading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+// Aspect ratio containers for consistent sizing
+.img-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  
+  &.ratio-16x9 {
+    padding-bottom: 56.25%;
+  }
+  
+  &.ratio-4x3 {
+    padding-bottom: 75%;
+  }
+  
+  &.ratio-3x2 {
+    padding-bottom: 66.666%;
+  }
+  
+  &.ratio-1x1 {
+    padding-bottom: 100%;
+  }
+  
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Portfolio specific lazy loading
+.portfolio-item {
+  .img-container {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Font Awesome 6 Free';
+      content: '\f03e'; // Image icon
+      font-size: 2rem;
+      color: #dee2e6;
+      opacity: 0.5;
+      z-index: 1;
+    }
+  }
+  
+  img.lazy-loaded + &::before {
+    display: none;
+  }
+}
+
+// Fade in animation for images
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Better image loading for modals
+.portfolio-modal {
+  img.lazy {
+    min-height: 200px;
+  }
+}
+
+// Disable blur for users who prefer reduced motion
+@media (prefers-reduced-motion: reduce) {
+  img.lazy {
+    filter: none;
+  }
+}
