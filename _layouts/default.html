@@ -27,16 +27,9 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ assets_path }}css/agency.min.css" rel="stylesheet">
+    <!-- AOS CSS - this stays in head -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100
-      });
-    </script>
   </head>
 
   <body id="page-top">
@@ -194,8 +187,22 @@
     <!-- Custom scripts for this template -->
     <script src="{{ assets_path }}js/agency.min.js"></script>
     
-    <!-- Modern Enhancements - ADD THIS LINE -->
+    <!-- Modern Enhancements -->
     <script src="{{ assets_path }}js/modern-enhancements.js"></script>
+
+    <!-- AOS - Animate On Scroll Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS after page loads
+      window.addEventListener('load', function() {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100,
+          easing: 'ease-out'
+        });
+      });
+    </script>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
