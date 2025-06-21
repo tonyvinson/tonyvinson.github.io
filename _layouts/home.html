@@ -10,9 +10,9 @@ layout: default
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">{{ site.data.home.intro.lead-in }}</div>
-          <div class="intro-heading text-uppercase">{{ site.data.home.intro.heading }}</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">{{ site.data.home.intro.btn }}</a>
+          <div class="intro-lead-in" data-aos="fade-down" data-aos-delay="100">{{ site.data.home.intro.lead-in }}</div>
+          <div class="intro-heading text-uppercase" data-aos="fade-up" data-aos-delay="300">{{ site.data.home.intro.heading }}</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services" data-aos="fade" data-aos-delay="500">{{ site.data.home.intro.btn }}</a>
         </div>
       </div>
     </header>
@@ -22,14 +22,14 @@ layout: default
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.services.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.services.subheading }}</h3>
+            <h2 class="section-heading text-uppercase" data-aos="fade-up">{{ site.data.home.services.heading }}</h2>
+            <h3 class="section-subheading text-muted" data-aos="fade-up" data-aos-delay="100">{{ site.data.home.services.subheading }}</h3>
           </div>
         </div>
         <div class="row text-center">
           {%- for service in site.data.home.services.service -%}
           {% assign ws = '' %}
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="{{ forloop.index | times: 100 }}">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
               <i class="{{ service.icon }} fa-stack-1x fa-inverse"></i>
@@ -41,7 +41,7 @@ layout: default
         {% assign ws = '' %}
         </div>
            <div class="row text-center">
-      <div class="col-md-12">
+      <div class="col-md-12" data-aos="fade-up" data-aos-delay="600">
         <a href="/assets/files/TechVizions_Capabilities_Statement.pdf" class="btn btn-primary" target="_blank">
           Download Our Capabilities Statement
         </a>
@@ -56,14 +56,14 @@ layout: default
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">{{ site.data.home.portfolio.heading }}</h2>
-            <h3 class="section-subheading text-muted">{{ site.data.home.portfolio.subheading }}</h3>
+            <h2 class="section-heading text-uppercase" data-aos="fade-up">{{ site.data.home.portfolio.heading }}</h2>
+            <h3 class="section-subheading text-muted" data-aos="fade-up" data-aos-delay="100">{{ site.data.home.portfolio.subheading }}</h3>
           </div>
         </div>
         <div class="row">
           {%- for project in site.projects -%}
           {% assign ws = '' %}
-          <div class="col-md-4 col-sm-6 portfolio-item">
+          <div class="col-md-4 col-sm-6 portfolio-item" data-aos="zoom-in" data-aos-delay="{{ forloop.index | times: 100 }}">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal{{ project.id | replace: '/projects/', '' }}">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
@@ -192,37 +192,37 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">{{ site.data.home.contact.heading }}</h2>
-        <h3 class="section-subheading text-muted">{{ site.data.home.contact.subheading }}</h3>
+        <h2 class="section-heading text-uppercase" data-aos="fade-up">{{ site.data.home.contact.heading }}</h2>
+        <h3 class="section-subheading text-muted" data-aos="fade-up" data-aos-delay="100">{{ site.data.home.contact.subheading }}</h3>
       </div>
     </div>
-    <div class="row">
+    <div class="row" data-aos="fade-up" data-aos-delay="200">
       <div class="col-lg-12">
         <form id="contactForm" action="https://formspree.io/f/xnnpnzbv" method="POST">
           <div class="row">
             <div class="col-md-6">
-              <div class="form-group">
+              <div class="form-group" data-aos="fade-right" data-aos-delay="300">
                 <input class="form-control" id="name" type="text" name="name" placeholder="{{ site.data.home.contact.name }}" required>
                 <p class="help-block text-danger"></p>
               </div>
-              <div class="form-group">
+              <div class="form-group" data-aos="fade-right" data-aos-delay="400">
                 <input class="form-control" id="email" type="email" name="email" placeholder="{{ site.data.home.contact.email }}" required>
                 <p class="help-block text-danger"></p>
               </div>
-              <div class="form-group">
+              <div class="form-group" data-aos="fade-right" data-aos-delay="500">
                 <input class="form-control" id="phone" type="tel" name="phone" placeholder="{{ site.data.home.contact.phone }}" required>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="form-group">
+              <div class="form-group" data-aos="fade-left" data-aos-delay="400">
                 <textarea class="form-control" id="message" name="message" placeholder="{{ site.data.home.contact.message }}" required></textarea>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="col-lg-12 text-center">
               <p id="form-status"></p>
-              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">
+              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" data-aos="zoom-in" data-aos-delay="600">
                 {{ site.data.home.contact.btn }}
               </button>
             </div>
