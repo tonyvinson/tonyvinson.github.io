@@ -423,3 +423,60 @@ img.lazy-loaded {
     filter: none;
   }
 }
+// --- Enhanced Buttons & CTAs ---
+
+.btn-gradient {
+  background: linear-gradient(90deg, #0062ff, #7f53ac 100%);
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 4px 14px rgba(0, 98, 255, 0.14);
+  transition: 
+    background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.13s cubic-bezier(0.42,0,0.58,1),
+    box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gradient:hover, .btn-gradient:focus {
+  background: linear-gradient(90deg, #1fd1f9, #7f53ac 100%);
+  color: #fff !important;
+  transform: translateY(-2px) scale(1.045);
+  box-shadow: 0 8px 28px rgba(31,209,249,0.12);
+  text-decoration: none;
+}
+
+.btn-glow {
+  box-shadow: 0 0 0 rgba(0, 98, 255, 0.25);
+  transition: box-shadow 0.4s;
+}
+.btn-glow:hover, .btn-glow:focus {
+  box-shadow: 0 0 16px 4px rgba(31,209,249,0.25);
+}
+
+.btn-underline {
+  position: relative;
+  transition: color 0.2s;
+}
+.btn-underline::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg,#0062ff,#7f53ac 100%);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.42,0,0.58,1);
+  position: absolute;
+  left: 0; bottom: -3px;
+}
+.btn-underline:hover::after, .btn-underline:focus::after {
+  width: 100%;
+}
+
+.btn-micro {
+  transition: transform 0.11s cubic-bezier(0.42,0,0.58,1);
+}
+.btn-micro:active {
+  transform: scale(0.94);
+}
+
