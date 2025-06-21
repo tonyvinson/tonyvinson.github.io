@@ -6,19 +6,19 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 // Core variables and mixins
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "_variables";
+@import "_mixins";
 // Global CSS
-@import "_global.scss";
+@import "_global";
 // Components
-@import "_navbar.scss";
-@import "_masthead.scss";
-@import "_services.scss";
-@import "_portfolio.scss";
-@import "_timeline.scss";
-@import "_team.scss";
-@import "_contact.scss";
-@import "_footer.scss";
-@import "_modern-enhancements.scss";
-@import "../_scss/modern-typography";
+@import "_navbar";
+@import "_masthead";
+@import "_services";
+@import "_portfolio";
+@import "_timeline";
+@import "_team";
+@import "_contact";
+@import "_footer";
+@import "_modern-enhancements";
+@import "modern-typography";
 
