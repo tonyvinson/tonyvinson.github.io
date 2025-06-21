@@ -480,3 +480,31 @@ img.lazy-loaded {
   transform: scale(0.94);
 }
 
+// Hero Button: Gradient & Micro-Interaction
+.btn-gradient {
+  background: linear-gradient(90deg, #ff8800, #ffb347 100%);
+  color: #fff !important;
+  border: none;
+  padding: 18px 44px;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  transition: background 0.4s, transform 0.13s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(255,136,0,0.13);
+  position: relative;
+  overflow: hidden;
+}
+.btn-gradient:hover, .btn-gradient:focus {
+  background: linear-gradient(90deg, #ffb347, #ff8800 100%);
+  color: #fff;
+  transform: scale(1.045);
+  box-shadow: 0 8px 28px rgba(255,136,0,0.16);
+}
+.btn-micro:active { transform: scale(0.96); }
+
+// Hero Trust Badge/Line
+.hero-trust img { display:inline-block;vertical-align:middle; }
+.hero-trust { margin-top: 2.2rem; font-size:1.03rem; color: #fff; }
+@media (max-width: 575.98px) {
+  .intro-heading { font-size: 2.1rem; }
+  .hero-trust span { display: block; margin-top: 0.5em; }
+}

@@ -8,14 +8,36 @@ layout: default
     {% assign ws = '' %}
     <!-- Header -->
     <header class="masthead">
-      <div class="container">
-        <div class="intro-text">
-          <div class="intro-lead-in" data-aos="fade-down" data-aos-delay="100">{{ site.data.home.intro.lead-in }}</div>
-          <div class="intro-heading text-uppercase" data-aos="fade-up" data-aos-delay="300">{{ site.data.home.intro.heading }}</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services" data-aos="fade" data-aos-delay="500">{{ site.data.home.intro.btn }}</a>
-        </div>
+  <div class="container">
+    <div class="intro-text">
+      <!-- Subheadline: add your desired text here -->
+      <div class="intro-lead-in" data-aos="fade-down" data-aos-delay="80">
+        Veteran-Owned. Results-Focused IT Consulting.
       </div>
-    </header>
+      <!-- Use <h1> for SEO, keep your data variable -->
+      <h1 class="intro-heading text-uppercase" data-aos="fade-up" data-aos-delay="200">
+        {{ site.data.home.intro.heading }}
+      </h1>
+      <!-- CTA Button: add gradient & micro-interaction -->
+      <a class="btn btn-gradient btn-micro btn-xl text-uppercase js-scroll-trigger"
+         href="#services"
+         data-aos="zoom-in"
+         data-aos-delay="340">
+        {{ site.data.home.intro.btn }}
+      </a>
+      <!-- (Optional) Trust badge line below CTA -->
+      <div class="hero-trust" data-aos="fade-up" data-aos-delay="500" style="margin-top:2.5rem;">
+        <img src="/assets/img/VOSB-logo-transparent.png"
+             alt="Veteran Owned Small Business"
+             height="42"
+             style="vertical-align:middle;margin-right:14px;">
+        <span class="text-light ml-2" style="font-size:1.04rem;letter-spacing:.01em;">
+          Trusted by business & government.
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
 
     <!-- Services -->
     <section id="services">
