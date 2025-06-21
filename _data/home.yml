@@ -13,7 +13,7 @@ services:
     - icon: fas fa-lock
       heading: Security Analysis/Consultation
       text: As hackers continue to become more sophisticated so must your security, protecting you and your client's data is extremely important and we are here to help .
-    - icon: fas fa-area-chart-line
+    - icon: fas fa-chart-line
       heading: Process Analysis/Consulting
       text: Devops, Agile, DevSecOps aren't just buzzwords let our experts help your organization adopt these principals and practices and watch your productivity explode.  
     - icon: fas fa-wifi
