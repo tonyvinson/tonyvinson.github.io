@@ -1,27 +1,21 @@
 intro:
-  lead-in: "Welcome To Techvizions!"
-  heading: Let Us Help You Realize Your Technical Visions 
-  btn: Tell Me More
+  lead-in: "TechVizions LLC"
+  heading: Cloud Security & Compliance Architecture
+  btn: View Our Work
 
 services:
-  heading: Services
-  subheading: Security, Solutions, Cloud, Network, Datacenter, Architecture, Automation, Agile, Devops, Efficiency, Process, Consulting, Training.
+  heading: What We Do
+  subheading: "Senior cloud security expertise for organizations that can't afford to get it wrong."
   service:
-    - icon: fas fa-cloud
-      heading: Cloud Migration/Solutions
-      text: Our team of Experts can help your organization maximize efficiency, resilience, and availabilty all while helping to keep costs at a minimum as you embark on your cloud journey  .
-    - icon: fas fa-lock
-      heading: Security Analysis/Consultation
-      text: As hackers continue to become more sophisticated so must your security, protecting you and your client's data is extremely important and we are here to help .
-    - icon: fas fa-chart-line
-      heading: Process Analysis/Consulting
-      text: Devops, Agile, DevSecOps aren't just buzzwords let our experts help your organization adopt these principals and practices and watch your productivity explode.  
-    - icon: fas fa-wifi
-      heading: Networking
-      text: Design, Security, Consulting, Implementation services for cloud and traditional network solutions .
-    - icon: fas fa-building-columns
-      heading: Training
-      text: Our staff and partners offer training in various areas.
+    - icon: fas fa-shield-halved
+      heading: Cloud Security Architecture
+      text: "AWS-native security design for regulated workloads. Identity, network, and data protection patterns aligned with FedRAMP, NIST 800-53, SOC 2, HIPAA, and PCI."
+    - icon: fas fa-clipboard-check
+      heading: Compliance Readiness & Implementation
+      text: "Hands-on compliance program build-out. Controls implementation, evidence collection, POA&M management, and 3PAO assessor coordination for FedRAMP and commercial frameworks."
+    - icon: fas fa-gears
+      heading: DevSecOps & Security Automation
+      text: "Infrastructure as code with integrated security scanning, audit logging, and continuous compliance validation. Terraform, AWS-native, and policy-as-code patterns."
 
 portfolio:
   heading: Portfolio

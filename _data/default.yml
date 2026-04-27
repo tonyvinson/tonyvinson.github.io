@@ -17,12 +17,8 @@ nav:
 copyright: Copyright &copy; Techvizions.com 2018
 
 social-buttons:
-  - icon: fab fa-twitter
-    url: '#' 
-  - icon: fab fa-facebook
-    url: '#'
   - icon: fab fa-linkedin
-    url: '#'
+    url: 'https://www.linkedin.com/company/techvizions-consulting/'
 
 quicklinks:
   - title: Privacy Policy
