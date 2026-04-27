@@ -7,5 +7,17 @@ sass:
 
 assets_path: '' 
 
+url: "https://techvizions.com"
+lang: "en"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+social:
+  name: TechVizions LLC
+  links:
+    - https://www.linkedin.com/company/techvizions-consulting/
+
 collections:
   projects:

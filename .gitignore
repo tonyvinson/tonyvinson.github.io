@@ -5,3 +5,4 @@ _site
 Gemfile.lock
 dump_site_code.sh
 site_code_dump.txt
+.DS_Store
