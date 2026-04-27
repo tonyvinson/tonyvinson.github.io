@@ -11,8 +11,8 @@ services:
       heading: Cloud Security Architecture
       text: "AWS-native security design for regulated workloads. Identity, network, and data protection patterns aligned with FedRAMP, NIST 800-53, SOC 2, HIPAA, and PCI."
     - icon: fas fa-clipboard-check
-      heading: Compliance Readiness & Implementation
-      text: "Hands-on compliance program build-out. Controls implementation, evidence collection, POA&M management, and 3PAO assessor coordination for FedRAMP and commercial frameworks."
+      heading: Compliance & Authorization
+      text: "Hands-on compliance program build-out across federal and commercial environments. FedRAMP and NIST 800-53 implementation for federal programs, plus SOC 2, HIPAA, and PCI readiness for regulated commercial organizations."
     - icon: fas fa-gears
       heading: DevSecOps & Security Automation
       text: "Infrastructure as code with integrated security scanning, audit logging, and continuous compliance validation. Terraform, AWS-native, and policy-as-code patterns."
