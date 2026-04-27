@@ -80,42 +80,16 @@
 
   <body id="page-top">
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-       <img src="../img/logos/techvizions-horizontal-no-llc-allwhite-fixed.svg"
-     style="max-height: 92px; width: auto;" 
-     class="img-fluid" alt="TechVizions Logo">
-      </a>
-      <!--<a class="navbar-brand js-scroll-trigger" href="#page-top">{{ site.data.default.brand.name }}</a>-->
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <!-- {{ site.data.default.menu-string }} -->
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
-          {%- for link in site.data.default.nav -%}
-          {% assign ws = '' %}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
-          </li>
-          {%- endfor -%}
-          {% assign ws = '' %}
-
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-    <!-- Navigation 
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="../img/logos/logo-web-light-transparent.png" height="92" width="140"></a>
-        <!--<a class="navbar-brand js-scroll-trigger" href="#page-top">{{ site.data.default.brand.name }}</a>-->
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+          <img src="{{ assets_path }}img/logos/techvizions-horizontal-no-llc-allwhite-fixed.svg"
+               style="max-height: 92px; width: auto;"
+               class="img-fluid" alt="TechVizions Logo">
+        </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <!-- {{ site.data.default.menu-string }} -->
-          <i class="fa fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
@@ -125,15 +99,16 @@
               <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
             </li>
             {%- endfor -%}
-          {% assign ws = '' %}
+            {% assign ws = '' %}
           </ul>
         </div>
       </div>
     </nav>
-    
+
     <main id="main-content">
 {{ content }}
     </main>
+
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -191,11 +166,11 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">{{ project.title }}</h2>
                   <p class="item-intro text-muted">{{ project.description }}</p>
-                  <img class="img-fluid d-block mx-auto lazy" 
-     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
-     data-src="{{ assets_path }}{{ project.image }}" 
-     alt="{{ project.title }}"
-     loading="lazy">
+                  <img class="img-fluid d-block mx-auto lazy"
+                       src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+                       data-src="{{ assets_path }}{{ project.image }}"
+                       alt="{{ project.title }}"
+                       loading="lazy">
                   {% assign ws = '' %}
                   {{- project.content -}}
                   {% assign ws = '' %}                  <ul class="list-inline">
@@ -232,7 +207,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="{{ assets_path }}js/agency.min.js"></script>
-    
+
     <!-- Modern Enhancements -->
     <script src="{{ assets_path }}js/modern-enhancements.js"></script>
 
@@ -249,25 +224,10 @@
         });
       });
     </script>
-    
+
     <!-- Lazy Loading Script -->
     <script src="{{ assets_path }}js/lazy-loading.js"></script>
 
-    
-    <!-- Tawk.to live chat widget
-    If you want to enable Tawk.to on your site, uncomment the script below:
-    <script type="text/javascript">
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/68559a59c96da61913b71e5c/1iu765rmi';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-      })();
-    </script>
-    -->
   </body>
 
 </html>
