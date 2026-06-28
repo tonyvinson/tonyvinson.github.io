@@ -17,6 +17,42 @@ services:
       heading: DevSecOps & Security Automation
       text: "Infrastructure as code with integrated security scanning, audit logging, and continuous compliance validation. Terraform, AWS-native, and policy-as-code patterns."
 
+federal:
+  heading: Federal Buyers
+  subheading: "Active SAM.gov registration. Micro-purchase ready cloud security and compliance support under $25,000."
+  sam:
+    - label: Entity
+      value: TechVizions LLC
+    - label: UEI
+      value: LCSTMPTTFVT5
+    - label: CAGE / NCAGE
+      value: 0BQG8
+    - label: SAM Status
+      value: Active Registration
+    - label: Registration Expires
+      value: Nov 12, 2026
+    - label: Purpose
+      value: All Awards
+  naics:
+    - code: 541511
+      title: Custom Computer Programming Services
+    - code: 541512
+      title: Computer Systems Design Services
+    - code: 541519
+      title: Other Computer Related Services
+    - code: 518210
+      title: Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services
+  packages:
+    - title: Cloud Security Assessment
+      price: "Starting at $9,500"
+      text: "Rapid review of cloud identity, network, logging, data protection, and control gaps with prioritized remediation guidance."
+    - title: NIST / FedRAMP Gap Review
+      price: "Starting at $12,500"
+      text: "Control-aligned assessment for federal cloud workloads, authorization readiness, and evidence planning."
+    - title: DevSecOps Pipeline Review
+      price: "Starting at $8,500"
+      text: "Security automation review for CI/CD, infrastructure as code, scanning, audit trails, and continuous compliance."
+
 portfolio:
   heading: Portfolio
   #subheading: Lorem ipsum dolor sit amet consectetur.

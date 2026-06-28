@@ -72,6 +72,72 @@ layout: default
   </div>
     </section>
 
+    <!-- Federal Buyers -->
+    <section class="bg-light" id="federal-buyers">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase" data-aos="fade-up">{{ site.data.home.federal.heading }}</h2>
+            <h3 class="section-subheading text-muted" data-aos="fade-up" data-aos-delay="100">{{ site.data.home.federal.subheading }}</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="150">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h4 class="service-heading">SAM.gov Registration</h4>
+                <dl class="row mb-0 text-left">
+                  {%- for item in site.data.home.federal.sam -%}
+                  <dt class="col-sm-5">{{ item.label }}</dt>
+                  <dd class="col-sm-7">{{ item.value }}</dd>
+                  {%- endfor -%}
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h4 class="service-heading">Target NAICS Codes</h4>
+                <div class="row text-left">
+                  {%- for naics in site.data.home.federal.naics -%}
+                  <div class="col-md-6 mb-3">
+                    <strong>{{ naics.code }}</strong><br>
+                    <span class="text-muted">{{ naics.title }}</span>
+                  </div>
+                  {%- endfor -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center" style="margin-top: 2rem;">
+          {%- for package in site.data.home.federal.packages -%}
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="{{ forloop.index | times: 100 }}">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h4 class="service-heading">{{ package.title }}</h4>
+                <p class="text-primary font-weight-bold">{{ package.price }}</p>
+                <p class="text-muted">{{ package.text }}</p>
+              </div>
+            </div>
+          </div>
+          {%- endfor -%}
+        </div>
+
+        <div class="row text-center" style="margin-top: 2rem;">
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="500">
+            <p class="large text-muted">TechVizions LLC supports federal, state, and local buyers with fixed-scope cloud security, compliance, DevSecOps, and IT modernization engagements designed for fast procurement.</p>
+            <a href="/assets/files/TechVizions_Capabilities_Statement.pdf" class="btn btn-primary" target="_blank">
+              Download Capabilities Statement
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Portfolio Grid -->
  
     <section class="bg-light" id="portfolio">
