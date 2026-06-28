@@ -129,6 +129,7 @@ def local_checks() -> None:
             "{{ assets_path }}css/agency.min.css",
             "body.layout-default #mainNav",
             "class=\"layout-{{ page.layout | default: 'default' }}\"",
+            "<a class=\"navbar-brand js-scroll-trigger\" href=\"/\"",
         ],
         "_layouts/default.html",
     )
@@ -157,6 +158,11 @@ def local_checks() -> None:
     ok("federal buyer data includes SAM, NAICS, and service URLs")
 
     workflow = read(".github/workflows/pages.yml")
+    agency_js = read("assets/js/agency.js")
+    agency_min_js = read("assets/js/agency.min.js")
+    assert_contains(agency_js, ["hasClass(\"layout-default\")", "addClass(\"navbar-shrink\")"], "assets/js/agency.js")
+    assert_contains(agency_min_js, ["hasClass(\"layout-default\")", "addClass(\"navbar-shrink\")"], "assets/js/agency.min.js")
+    ok("interior pages keep navbar-shrink at initial page load")
     assert_contains(
         workflow,
         [
