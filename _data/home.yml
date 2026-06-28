@@ -107,7 +107,7 @@ clients:
     url: "#"
 
 contact:
-  heading: Request a Micro-Purchase Quote
+  heading: Request a Federal Quote
   subheading: "Tell us what you need reviewed, assessed, or modernized. We will respond with a fixed-scope federal buyer-friendly quote."
   name: Your Name *
   name-required: Please enter your name.
@@ -117,7 +117,7 @@ contact:
   phone-required: Please enter your phone number.
   message: Tell us about your cloud security, compliance, DevSecOps, or IT modernization need *
   message-required: Please enter a message.
-  btn: Request Quote
+  btn: Request Federal Quote
 
   js-url: '././mail/contact_me.php'
   js-success: 'Your message has been sent. '

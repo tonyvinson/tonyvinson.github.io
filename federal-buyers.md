@@ -20,7 +20,7 @@ permalink: /federal-buyers/
         <h2 class="service-heading">How to Buy</h2>
         <p class="large text-muted">{{ site.data.home.federal.how_to_buy }}</p>
         <p class="text-muted">Typical engagements are scoped as short, fixed-price assessments or implementation sprints with clear deliverables, timelines, and decision-ready recommendations.</p>
-        <a href="/#contact" class="btn btn-primary btn-xl text-uppercase">Request a Quote</a>
+        <a href="/#contact" class="btn btn-primary btn-xl text-uppercase">Request a Federal Quote</a>
         <a href="/assets/files/TechVizions_Capabilities_Statement.pdf" class="btn btn-outline-primary btn-xl text-uppercase" target="_blank">Download Capabilities Statement</a>
       </div>
       <div class="col-lg-5">
