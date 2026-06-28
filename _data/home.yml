@@ -1,7 +1,7 @@
 intro:
   lead-in: "TechVizions LLC"
   heading: Cloud Security & Compliance Architecture
-  btn: View Our Work
+  btn: Federal Buyers
 
 services:
   heading: What We Do
@@ -20,6 +20,14 @@ services:
 federal:
   heading: Federal Buyers
   subheading: "Active SAM.gov registration. Micro-purchase ready cloud security and compliance support under $25,000."
+  how_to_buy: "TechVizions LLC is available for federal micro-purchases under $25,000. Cardholders and program offices can request a fixed-scope quote for cloud security, compliance, DevSecOps, or IT modernization support."
+  trust:
+    - Active SAM.gov Registration
+    - UEI LCSTMPTTFVT5
+    - CAGE 0BQG8
+    - Veteran-Owned
+    - Minority-Owned
+    - CCSP
   sam:
     - label: Entity
       value: TechVizions LLC
@@ -45,16 +53,19 @@ federal:
   packages:
     - title: Cloud Security Assessment
       price: "Starting at $9,500"
+      url: /cloud-security-assessment/
       text: "Rapid review of cloud identity, network, logging, data protection, and control gaps with prioritized remediation guidance."
     - title: NIST / FedRAMP Gap Review
       price: "Starting at $12,500"
+      url: /fedramp-nist-gap-review/
       text: "Control-aligned assessment for federal cloud workloads, authorization readiness, and evidence planning."
     - title: DevSecOps Pipeline Review
       price: "Starting at $8,500"
+      url: /devsecops-pipeline-review/
       text: "Security automation review for CI/CD, infrastructure as code, scanning, audit trails, and continuous compliance."
 
 portfolio:
-  heading: Portfolio
+  heading: Past Performance
   #subheading: Lorem ipsum dolor sit amet consectetur.
 
 about:
@@ -96,17 +107,17 @@ clients:
     url: "#"
 
 contact:
-  heading: Contact Us
-  subheading: 
+  heading: Request a Micro-Purchase Quote
+  subheading: "Tell us what you need reviewed, assessed, or modernized. We will respond with a fixed-scope federal buyer-friendly quote."
   name: Your Name *
   name-required: Please enter your name.
   email: Your Email *
   email-required: Please enter your email address.
   phone: Your Phone *
   phone-required: Please enter your phone number.
-  message: Your Message *
+  message: Tell us about your cloud security, compliance, DevSecOps, or IT modernization need *
   message-required: Please enter a message.
-  btn: Send Message
+  btn: Request Quote
 
   js-url: '././mail/contact_me.php'
   js-success: 'Your message has been sent. '

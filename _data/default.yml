@@ -4,19 +4,19 @@ menu-string: Menu
 
 nav:
   - title: Services
-    url: '#services'
+    url: '/#services'
   - title: Federal Buyers
-    url: '#federal-buyers'
-  - title: Portfolio
-    url: '#portfolio'
+    url: '/federal-buyers/'
+  - title: Past Performance
+    url: '/#portfolio'
 #  - title: About
 #    url: '#about'
 #  - title: Team
 #    url: '#team'
   - title: Contact
-    url: '#contact'
+    url: '/#contact'
 
-copyright: Copyright &copy; Techvizions.com 2018
+copyright: Copyright &copy; TechVizions LLC 2026
 
 social-buttons:
   - icon: fab fa-linkedin

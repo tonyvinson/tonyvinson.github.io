@@ -20,19 +20,26 @@ layout: default
       </h1>
       <!-- CTA Button: add gradient & micro-interaction -->
       <a class="btn btn-gradient btn-micro btn-xl text-uppercase js-scroll-trigger"
-         href="#services"
+         href="#federal-buyers"
          data-aos="zoom-in"
          data-aos-delay="340">
         {{ site.data.home.intro.btn }}
       </a>
-      <!-- (Optional) Trust badge line below CTA -->
+      <a class="btn btn-primary btn-xl text-uppercase"
+         href="/assets/files/TechVizions_Capabilities_Statement.pdf"
+         target="_blank"
+         data-aos="zoom-in"
+         data-aos-delay="420">
+        Download Capabilities Statement
+      </a>
+      <!-- Trust badge line below CTA -->
       <div class="hero-trust" data-aos="fade-up" data-aos-delay="500" style="margin-top:2.5rem;">
         <img src="/assets/img/VOSB-logo-transparent.webp"
              alt="Veteran Owned Small Business"
              height="42"
              style="vertical-align:middle;margin-right:14px;">
         <span class="text-light ml-2" style="font-size:1.04rem;letter-spacing:.01em;">
-          CCSP · AWS · FedRAMP · NIST 800-53 · SOC 2 · HIPAA · Veteran-Owned
+          Active SAM.gov · UEI LCSTMPTTFVT5 · CAGE 0BQG8 · CCSP · Veteran-Owned · Minority-Owned
         </span>
       </div>
     </div>
@@ -114,6 +121,18 @@ layout: default
         </div>
 
         <div class="row text-center" style="margin-top: 2rem;">
+          <div class="col-lg-10 mx-auto" data-aos="fade-up" data-aos-delay="225">
+            <h4 class="service-heading">How to Buy</h4>
+            <p class="large text-muted">{{ site.data.home.federal.how_to_buy }}</p>
+            <div class="text-muted">
+              {%- for item in site.data.home.federal.trust -%}
+              <span class="badge badge-light" style="margin: .25rem; padding: .6rem .75rem;">{{ item }}</span>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center" style="margin-top: 2rem;">
           {%- for package in site.data.home.federal.packages -%}
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="{{ forloop.index | times: 100 }}">
             <div class="card h-100 shadow-sm border-0">
@@ -121,6 +140,7 @@ layout: default
                 <h4 class="service-heading">{{ package.title }}</h4>
                 <p class="text-primary font-weight-bold">{{ package.price }}</p>
                 <p class="text-muted">{{ package.text }}</p>
+                <a href="{{ package.url }}" class="btn btn-sm btn-outline-primary">Learn More</a>
               </div>
             </div>
           </div>
@@ -132,6 +152,9 @@ layout: default
             <p class="large text-muted">TechVizions LLC supports federal, state, and local buyers with fixed-scope cloud security, compliance, DevSecOps, and IT modernization engagements designed for fast procurement.</p>
             <a href="/assets/files/TechVizions_Capabilities_Statement.pdf" class="btn btn-primary" target="_blank">
               Download Capabilities Statement
+            </a>
+            <a href="/federal-buyers/" class="btn btn-outline-primary">
+              View Federal Buyer Page
             </a>
           </div>
         </div>
@@ -176,7 +199,6 @@ layout: default
     </div>
   </div>
 </section>
--->
     <!-- Team -->
 <!--
     <section class="bg-light" id="team">
