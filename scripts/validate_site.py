@@ -127,10 +127,12 @@ def local_checks() -> None:
             "{{ page.keywords | default:",
             "{{ assets_path }}vendor/bootstrap/css/bootstrap.min.css",
             "{{ assets_path }}css/agency.min.css",
+            "body.layout-default #mainNav",
+            "class=\"layout-{{ page.layout | default: 'default' }}\"",
         ],
         "_layouts/default.html",
     )
-    ok("default layout supports per-page SEO and asset path variable")
+    ok("default layout supports per-page SEO, asset path variable, and readable interior nav")
 
     home_layout = read("_layouts/home.html")
     assert_contains(home_layout, ["#federal-buyers", "View Federal Buyer Page", "Learn More", "<!-- Portfolio Grid -->"], "_layouts/home.html")

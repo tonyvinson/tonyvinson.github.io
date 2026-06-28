@@ -73,12 +73,26 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ assets_path }}css/agency.min.css" rel="stylesheet">
+    <style>
+      /* Interior pages do not have the dark homepage masthead behind the fixed nav. */
+      body.layout-default #mainNav {
+        background-color: #212529;
+        box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.12);
+      }
+      body.layout-default #mainNav .navbar-nav .nav-item .nav-link {
+        color: rgba(255, 255, 255, 0.9);
+      }
+      body.layout-default #mainNav .navbar-nav .nav-item .nav-link:hover,
+      body.layout-default #mainNav .navbar-nav .nav-item .nav-link:focus {
+        color: #ff7f18;
+      }
+    </style>
     <!-- AOS CSS - this stays in head -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" class="layout-{{ page.layout | default: 'default' }}">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
