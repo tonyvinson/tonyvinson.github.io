@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Federal Buyers | TechVizions LLC
-description: Active SAM.gov registered TechVizions LLC provides federal micro-purchase cloud security, FedRAMP, NIST 800-53, DevSecOps, and IT modernization services under $25,000.
-keywords: federal micro-purchase IT services, SAM.gov cloud security, FedRAMP readiness, NIST 800-53, DevSecOps, veteran owned IT consulting, minority owned IT consulting, UEI LCSTMPTTFVT5, CAGE 0BQG8
+description: Active SAM.gov registered TechVizions LLC provides federal-ready cloud security, FedRAMP, NIST 800-53, DevSecOps, and IT modernization support.
+keywords: federal cloud security, SAM.gov cloud security, FedRAMP readiness, NIST 800-53, DevSecOps, veteran owned IT consulting, minority owned IT consulting, UEI LCSTMPTTFVT5, CAGE 0BQG8
 permalink: /federal-buyers/
 ---
 
@@ -11,7 +11,7 @@ permalink: /federal-buyers/
     <div class="row">
       <div class="col-lg-12 text-center">
         <h1 class="section-heading text-uppercase">Federal Buyers</h1>
-        <h3 class="section-subheading text-muted">Active SAM.gov registration. Micro-purchase ready cloud security and compliance support under $25,000.</h3>
+        <h3 class="section-subheading text-muted">Active SAM.gov registration. Federal-ready cloud security, compliance, DevSecOps, and IT modernization support.</h3>
       </div>
     </div>
 
@@ -40,7 +40,7 @@ permalink: /federal-buyers/
 
     <div class="row text-center" style="margin-top: 3rem;">
       <div class="col-lg-12">
-        <h2 class="section-heading text-uppercase">Micro-Purchase Service Packages</h2>
+        <h2 class="section-heading text-uppercase">Fixed-Scope Federal Service Offerings</h2>
       </div>
       {%- for package in site.data.home.federal.packages -%}
       <div class="col-md-4">

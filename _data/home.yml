@@ -19,8 +19,8 @@ services:
 
 federal:
   heading: Federal Buyers
-  subheading: "Active SAM.gov registration. Micro-purchase ready cloud security and compliance support under $25,000."
-  how_to_buy: "TechVizions LLC is available for federal micro-purchases under $25,000. Cardholders and program offices can request a fixed-scope quote for cloud security, compliance, DevSecOps, or IT modernization support."
+  subheading: "Active SAM.gov registration. Federal-ready cloud security, compliance, DevSecOps, and IT modernization support."
+  how_to_buy: "TechVizions LLC provides fixed-scope cloud security, compliance, DevSecOps, and IT modernization support for federal buyers. Engagements can be structured for streamlined purchasing, including under the $25,000 micro-purchase threshold when appropriate."
   trust:
     - Active SAM.gov Registration
     - UEI LCSTMPTTFVT5
