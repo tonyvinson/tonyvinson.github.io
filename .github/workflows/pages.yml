@@ -22,6 +22,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
+      - name: Validate site contract
+        run: python3 scripts/validate_site.py --local
+
       - name: Configure Pages
         uses: actions/configure-pages@v6
 

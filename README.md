@@ -1,3 +1,25 @@
+# TechVizions website
+
+Jekyll/GitHub Pages site for TechVizions LLC.
+
+## Git workflow test harness
+
+Run local/static contract checks before committing:
+
+```bash
+python3 scripts/validate_site.py --local
+```
+
+Run the full smoke harness when GitHub CLI is authenticated and the site is deployed:
+
+```bash
+bash scripts/test_git_workflow.sh
+```
+
+The harness checks required files, child-page asset paths, federal buyer/SAM/NAICS content, the capabilities statement PDF, GitHub Pages workflow configuration, live deployed URLs/assets, and latest deployment status. The GitHub Pages workflow runs `python3 scripts/validate_site.py --local` before the Jekyll build so regressions fail fast in CI.
+
+---
+
 # Jekyll Theme based on Startbootstrap Agency
 
 jekyll-theme-startbootstrap-agency is a Jekyll theme based on Start Bootstrap - Agency. You can see the [live demo](http://www.vrachas.com/jekyll-theme-startbootstrap-agency/).
